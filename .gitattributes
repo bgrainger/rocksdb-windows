@@ -1,0 +1,7 @@
+* text=auto
+
+*.cc text
+*.c text
+*.h text
+
+*.sln text eol=crlf
