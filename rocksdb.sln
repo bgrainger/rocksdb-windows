@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 13.00
+# Visual Studio 2013
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rocksdb", "rocksdb.vcxproj", "{3CEF00B5-EE54-4348-A740-3B3EBCBD39AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Win32 = Default|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CEF00B5-EE54-4348-A740-3B3EBCBD39AA}.Default|Win32.ActiveCfg = Default|Win32
+		{3CEF00B5-EE54-4348-A740-3B3EBCBD39AA}.Default|Win32.Build.0 = Default|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

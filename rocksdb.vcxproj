@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Default|Win32">
+      <Configuration>Default</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CEF00B5-EE54-4348-A740-3B3EBCBD39AA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rocksdb</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;OS_WIN;ROCKSDB_ATOMIC_PRESENT;ROCKSDB_PLATFORM_WIN;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;OS_WIN;ROCKSDB_ATOMIC_PRESENT;ROCKSDB_PLATFORM_WIN;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="rocksdb.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rocksdb\util\sync_point.h"/>
+    <ClInclude Include="rocksdb\util\hash_linklist_rep.h"/>
+    <ClInclude Include="rocksdb\util\murmurhash.h"/>
+    <ClInclude Include="rocksdb\util\perf_context_imp.h"/>
+    <ClInclude Include="rocksdb\util\autovector.h"/>
+    <ClInclude Include="rocksdb\util\log_buffer.h"/>
+    <ClInclude Include="rocksdb\util\dynamic_bloom.h"/>
+    <ClInclude Include="rocksdb\util\auto_roll_logger.h"/>
+    <ClInclude Include="rocksdb\util\hash.h"/>
+    <ClInclude Include="rocksdb\util\hash_cuckoo_rep.h"/>
+    <ClInclude Include="rocksdb\util\xxhash.h"/>
+    <ClInclude Include="rocksdb\util\arena.h"/>
+    <ClInclude Include="rocksdb\util\crc32c.h"/>
+    <ClInclude Include="rocksdb\util\stl_wrappers.h"/>
+    <ClInclude Include="rocksdb\util\stop_watch.h"/>
+    <ClInclude Include="rocksdb\util\blob_store.h"/>
+    <ClInclude Include="rocksdb\util\logging.h"/>
+    <ClInclude Include="rocksdb\util\posix_logger.h"/>
+    <ClInclude Include="rocksdb\util\statistics.h"/>
+    <ClInclude Include="rocksdb\util\random.h"/>
+    <ClInclude Include="rocksdb\util\histogram.h"/>
+    <ClInclude Include="rocksdb\util\hash_skiplist_rep.h"/>
+    <ClInclude Include="rocksdb\util\stats_logger.h"/>
+    <ClInclude Include="rocksdb\util\thread_local.h"/>
+    <ClInclude Include="rocksdb\util\string_util.h"/>
+    <ClInclude Include="rocksdb\util\mutexlock.h"/>
+    <ClInclude Include="rocksdb\util\coding.h"/>
+    <ClInclude Include="rocksdb\util\build_version.h"/>
+    <ClInclude Include="rocksdb\table\block_based_table_factory.h"/>
+    <ClInclude Include="rocksdb\table\block_based_table_builder.h"/>
+    <ClInclude Include="rocksdb\table\merger.h"/>
+    <ClInclude Include="rocksdb\table\plain_table_builder.h"/>
+    <ClInclude Include="rocksdb\table\iterator_wrapper.h"/>
+    <ClInclude Include="rocksdb\table\block.h"/>
+    <ClInclude Include="rocksdb\table\table_builder.h"/>
+    <ClInclude Include="rocksdb\table\meta_blocks.h"/>
+    <ClInclude Include="rocksdb\table\plain_table_factory.h"/>
+    <ClInclude Include="rocksdb\table\plain_table_reader.h"/>
+    <ClInclude Include="rocksdb\table\filter_block.h"/>
+    <ClInclude Include="rocksdb\table\block_builder.h"/>
+    <ClInclude Include="rocksdb\table\table_reader.h"/>
+    <ClInclude Include="rocksdb\table\block_hash_index.h"/>
+    <ClInclude Include="rocksdb\table\two_level_iterator.h"/>
+    <ClInclude Include="rocksdb\table\format.h"/>
+    <ClInclude Include="rocksdb\table\iter_heap.h"/>
+    <ClInclude Include="rocksdb\table\block_based_table_reader.h"/>
+    <ClInclude Include="rocksdb\db\compaction.h"/>
+    <ClInclude Include="rocksdb\db\file_indexer.h"/>
+    <ClInclude Include="rocksdb\db\log_writer.h"/>
+    <ClInclude Include="rocksdb\db\table_properties_collector.h"/>
+    <ClInclude Include="rocksdb\db\memtable.h"/>
+    <ClInclude Include="rocksdb\db\table_cache.h"/>
+    <ClInclude Include="rocksdb\db\forward_iterator.h"/>
+    <ClInclude Include="rocksdb\db\builder.h"/>
+    <ClInclude Include="rocksdb\db\transaction_log_impl.h"/>
+    <ClInclude Include="rocksdb\db\log_format.h"/>
+    <ClInclude Include="rocksdb\db\version_edit.h"/>
+    <ClInclude Include="rocksdb\db\log_reader.h"/>
+    <ClInclude Include="rocksdb\db\dbformat.h"/>
+    <ClInclude Include="rocksdb\db\tailing_iter.h"/>
+    <ClInclude Include="rocksdb\db\version_set.h"/>
+    <ClInclude Include="rocksdb\db\merge_context.h"/>
+    <ClInclude Include="rocksdb\db\write_batch_internal.h"/>
+    <ClInclude Include="rocksdb\db\snapshot.h"/>
+    <ClInclude Include="rocksdb\db\internal_stats.h"/>
+    <ClInclude Include="rocksdb\db\db_impl_readonly.h"/>
+    <ClInclude Include="rocksdb\db\memtable_list.h"/>
+    <ClInclude Include="rocksdb\db\db_iter.h"/>
+    <ClInclude Include="rocksdb\db\skiplist.h"/>
+    <ClInclude Include="rocksdb\db\filename.h"/>
+    <ClInclude Include="rocksdb\db\compaction_picker.h"/>
+    <ClInclude Include="rocksdb\db\merge_helper.h"/>
+    <ClInclude Include="rocksdb\db\column_family.h"/>
+    <ClInclude Include="rocksdb\db\db_impl.h"/>
+    <ClInclude Include="rocksdb\port\port.h"/>
+    <ClInclude Include="rocksdb\port\likely.h"/>
+    <ClInclude Include="rocksdb\port\atomic_pointer.h"/>
+    <ClInclude Include="rocksdb\port\port_win.h"/>
+    <ClInclude Include="rocksdb\port\stack_trace.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rocksdb\util\options.cc"/>
+    <ClCompile Include="rocksdb\util\hash_cuckoo_rep.cc"/>
+    <ClCompile Include="rocksdb\util\perf_context.cc"/>
+    <ClCompile Include="rocksdb\util\hash_linklist_rep.cc"/>
+    <ClCompile Include="rocksdb\util\sync_point.cc"/>
+    <ClCompile Include="rocksdb\util\skiplistrep.cc"/>
+    <ClCompile Include="rocksdb\util\histogram.cc"/>
+    <ClCompile Include="rocksdb\util\string_util.cc"/>
+    <ClCompile Include="rocksdb\util\statistics.cc"/>
+    <ClCompile Include="rocksdb\util\env.cc"/>
+    <ClCompile Include="rocksdb\util\murmurhash.cc"/>
+    <ClCompile Include="rocksdb\util\crc32c.cc"/>
+    <ClCompile Include="rocksdb\util\coding.cc"/>
+    <ClCompile Include="rocksdb\util\env_win.cc"/>
+    <ClCompile Include="rocksdb\util\auto_roll_logger.cc"/>
+    <ClCompile Include="rocksdb\util\comparator.cc"/>
+    <ClCompile Include="rocksdb\util\slice.cc"/>
+    <ClCompile Include="rocksdb\util\status.cc"/>
+    <ClCompile Include="rocksdb\util\logging.cc"/>
+    <ClCompile Include="rocksdb\util\hash_skiplist_rep.cc"/>
+    <ClCompile Include="rocksdb\util\hash.cc"/>
+    <ClCompile Include="rocksdb\util\arena.cc"/>
+    <ClCompile Include="rocksdb\util\bloom.cc"/>
+    <ClCompile Include="rocksdb\util\blob_store.cc"/>
+    <ClCompile Include="rocksdb\util\vectorrep.cc"/>
+    <ClCompile Include="rocksdb\util\xxhash.cc"/>
+    <ClCompile Include="rocksdb\util\cache.cc"/>
+    <ClCompile Include="rocksdb\util\dynamic_bloom.cc"/>
+    <ClCompile Include="rocksdb\util\log_buffer.cc"/>
+    <ClCompile Include="rocksdb\util\filter_policy.cc"/>
+    <ClCompile Include="rocksdb\util\thread_local.cc"/>
+    <ClCompile Include="rocksdb\table\block_based_table_factory.cc"/>
+    <ClCompile Include="rocksdb\table\meta_blocks.cc"/>
+    <ClCompile Include="rocksdb\table\plain_table_reader.cc"/>
+    <ClCompile Include="rocksdb\table\flush_block_policy.cc"/>
+    <ClCompile Include="rocksdb\table\block_builder.cc"/>
+    <ClCompile Include="rocksdb\table\plain_table_builder.cc"/>
+    <ClCompile Include="rocksdb\table\block_based_table_builder.cc"/>
+    <ClCompile Include="rocksdb\table\block.cc"/>
+    <ClCompile Include="rocksdb\table\two_level_iterator.cc"/>
+    <ClCompile Include="rocksdb\table\plain_table_factory.cc"/>
+    <ClCompile Include="rocksdb\table\iterator.cc"/>
+    <ClCompile Include="rocksdb\table\table_properties.cc"/>
+    <ClCompile Include="rocksdb\table\merger.cc"/>
+    <ClCompile Include="rocksdb\table\block_based_table_reader.cc"/>
+    <ClCompile Include="rocksdb\table\block_hash_index.cc"/>
+    <ClCompile Include="rocksdb\table\filter_block.cc"/>
+    <ClCompile Include="rocksdb\table\format.cc"/>
+    <ClCompile Include="rocksdb\db\write_batch.cc"/>
+    <ClCompile Include="rocksdb\db\tailing_iter.cc"/>
+    <ClCompile Include="rocksdb\db\db_stats_logger.cc"/>
+    <ClCompile Include="rocksdb\db\log_writer.cc"/>
+    <ClCompile Include="rocksdb\db\forward_iterator.cc"/>
+    <ClCompile Include="rocksdb\db\db_iter.cc"/>
+    <ClCompile Include="rocksdb\db\memtable.cc"/>
+    <ClCompile Include="rocksdb\db\merge_helper.cc"/>
+    <ClCompile Include="rocksdb\db\version_edit.cc"/>
+    <ClCompile Include="rocksdb\db\builder.cc"/>
+    <ClCompile Include="rocksdb\db\table_properties_collector.cc"/>
+    <ClCompile Include="rocksdb\db\version_set.cc"/>
+    <ClCompile Include="rocksdb\db\repair.cc"/>
+    <ClCompile Include="rocksdb\db\table_cache.cc"/>
+    <ClCompile Include="rocksdb\db\column_family.cc"/>
+    <ClCompile Include="rocksdb\db\memtable_list.cc"/>
+    <ClCompile Include="rocksdb\db\c.cc"/>
+    <ClCompile Include="rocksdb\db\transaction_log_impl.cc"/>
+    <ClCompile Include="rocksdb\db\file_indexer.cc"/>
+    <ClCompile Include="rocksdb\db\compaction.cc"/>
+    <ClCompile Include="rocksdb\db\log_reader.cc"/>
+    <ClCompile Include="rocksdb\db\db_filesnapshot.cc"/>
+    <ClCompile Include="rocksdb\db\dbformat.cc"/>
+    <ClCompile Include="rocksdb\db\internal_stats.cc"/>
+    <ClCompile Include="rocksdb\db\compaction_picker.cc"/>
+    <ClCompile Include="rocksdb\db\db_impl_debug.cc"/>
+    <ClCompile Include="rocksdb\db\merge_operator.cc"/>
+    <ClCompile Include="rocksdb\db\db_impl.cc"/>
+    <ClCompile Include="rocksdb\db\db_impl_readonly.cc"/>
+    <ClCompile Include="rocksdb\db\filename.cc"/>
+    <ClCompile Include="rocksdb\port\port_win.cc"/>
+    <ClCompile Include="rocksdb\port\stack_trace.cc"/>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

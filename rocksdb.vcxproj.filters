@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="rocksdb">
+      <UniqueIdentifier>{8F673DE8-3E9F-F7C8-C89B-8A8DDD4FCF79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rocksdb\util">
+      <UniqueIdentifier>{F977CC92-61A1-407C-2835-A38A3BBED548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rocksdb\table">
+      <UniqueIdentifier>{0C1E139B-0634-F9F7-68C7-7D220860C8C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rocksdb\db">
+      <UniqueIdentifier>{A8FC35A1-AD94-C839-B350-BA0A428D4294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rocksdb\port">
+      <UniqueIdentifier>{56285779-61EB-16AC-749B-C9867D0449BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rocksdb.gyp"/>
+    <ClInclude Include="rocksdb\util\sync_point.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\hash_linklist_rep.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\options.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\hash_cuckoo_rep.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\murmurhash.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\perf_context_imp.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\perf_context.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\autovector.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\hash_linklist_rep.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\sync_point.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\skiplistrep.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\log_buffer.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\dynamic_bloom.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\histogram.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\auto_roll_logger.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\hash.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\hash_cuckoo_rep.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\xxhash.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\string_util.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\statistics.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\arena.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\env.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\murmurhash.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\crc32c.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\coding.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\env_win.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\auto_roll_logger.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\crc32c.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\stl_wrappers.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\stop_watch.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\blob_store.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\comparator.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\logging.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\slice.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\posix_logger.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\statistics.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\status.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\random.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\histogram.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\logging.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\hash_skiplist_rep.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\hash_skiplist_rep.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\hash.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\arena.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\bloom.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\blob_store.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\vectorrep.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\xxhash.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\stats_logger.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\thread_local.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\string_util.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\cache.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\dynamic_bloom.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\log_buffer.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\mutexlock.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\util\coding.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\util\filter_policy.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\util\thread_local.cc">
+      <Filter>rocksdb\util</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\util\build_version.h">
+      <Filter>rocksdb\util</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\block_based_table_factory.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\meta_blocks.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\plain_table_reader.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\flush_block_policy.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\block_based_table_factory.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\block_based_table_builder.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\block_builder.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\plain_table_builder.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\block_based_table_builder.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\block.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\merger.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\plain_table_builder.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\iterator_wrapper.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\two_level_iterator.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\block.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\table_builder.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\meta_blocks.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\plain_table_factory.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\plain_table_reader.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\filter_block.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\plain_table_factory.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\block_builder.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\iterator.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\table_reader.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\block_hash_index.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\table_properties.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\merger.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\table\block_based_table_reader.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\two_level_iterator.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\table\format.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\block_hash_index.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\iter_heap.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\filter_block.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\table\block_based_table_reader.h">
+      <Filter>rocksdb\table</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\table\format.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\write_batch.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\compaction.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\tailing_iter.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\file_indexer.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\db_stats_logger.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\log_writer.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\log_writer.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\table_properties_collector.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\memtable.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\table_cache.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\forward_iterator.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\forward_iterator.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\db_iter.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\memtable.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\merge_helper.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\builder.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\version_edit.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\transaction_log_impl.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\builder.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\log_format.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\table_properties_collector.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\version_set.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\version_edit.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\log_reader.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\dbformat.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\tailing_iter.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\repair.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\table_cache.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\version_set.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\column_family.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\merge_context.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\memtable_list.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\c.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\transaction_log_impl.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\write_batch_internal.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\file_indexer.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\compaction.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\log_reader.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\db_filesnapshot.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\snapshot.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\internal_stats.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\db_impl_readonly.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\memtable_list.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\dbformat.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\internal_stats.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\compaction_picker.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\db_iter.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\skiplist.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\filename.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\db_impl_debug.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\merge_operator.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClCompile Include="rocksdb\db\db_impl.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\compaction_picker.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\merge_helper.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\db\column_family.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\db_impl_readonly.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\db\db_impl.h">
+      <Filter>rocksdb\db</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\db\filename.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\port\port.h">
+      <Filter>rocksdb\port</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\port\port_win.cc">
+      <Filter>rocksdb\port</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\port\likely.h">
+      <Filter>rocksdb\port</Filter>
+    </ClInclude>
+    <ClCompile Include="rocksdb\port\stack_trace.cc">
+      <Filter>rocksdb\port</Filter>
+    </ClCompile>
+    <ClInclude Include="rocksdb\port\atomic_pointer.h">
+      <Filter>rocksdb\port</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\port\port_win.h">
+      <Filter>rocksdb\port</Filter>
+    </ClInclude>
+    <ClInclude Include="rocksdb\port\stack_trace.h">
+      <Filter>rocksdb\port</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
