@@ -9,6 +9,7 @@
         'defines': [
         ],
         'include_dirs': [
+          '.',
           'rocksdb',
           'rocksdb/include',
         ],
@@ -181,9 +182,9 @@
 			  'WIN32_LEAN_AND_MEAN'
             ],
 			'sources': [
-				'rocksdb/port/port_win.cc',
-				'rocksdb/port/port_win.h',
-				'rocksdb/util/env_win.cc',
+				'port/port_win.cc',
+				'port/port_win.h',
+				'util/env_win.cc',
 			]
           },
           ]

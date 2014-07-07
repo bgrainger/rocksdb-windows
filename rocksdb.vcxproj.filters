@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{F977CC92-61A1-407C-2835-A38A3BBED548}</UniqueIdentifier>
+    </Filter>
     <Filter Include="rocksdb">
       <UniqueIdentifier>{8F673DE8-3E9F-F7C8-C89B-8A8DDD4FCF79}</UniqueIdentifier>
     </Filter>
@@ -16,9 +19,15 @@
     <Filter Include="rocksdb\port">
       <UniqueIdentifier>{56285779-61EB-16AC-749B-C9867D0449BF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="port">
+      <UniqueIdentifier>{56285779-61EB-16AC-749B-C9867D0449BF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="rocksdb.gyp"/>
+    <ClCompile Include="util\env_win.cc">
+      <Filter>util</Filter>
+    </ClCompile>
     <ClInclude Include="rocksdb\util\sync_point.h">
       <Filter>rocksdb\util</Filter>
     </ClInclude>
@@ -92,9 +101,6 @@
       <Filter>rocksdb\util</Filter>
     </ClCompile>
     <ClCompile Include="rocksdb\util\coding.cc">
-      <Filter>rocksdb\util</Filter>
-    </ClCompile>
-    <ClCompile Include="rocksdb\util\env_win.cc">
       <Filter>rocksdb\util</Filter>
     </ClCompile>
     <ClCompile Include="rocksdb\util\auto_roll_logger.cc">
@@ -259,6 +265,9 @@
     <ClCompile Include="rocksdb\table\plain_table_factory.cc">
       <Filter>rocksdb\table</Filter>
     </ClCompile>
+    <ClCompile Include="rocksdb\table\format.cc">
+      <Filter>rocksdb\table</Filter>
+    </ClCompile>
     <ClInclude Include="rocksdb\table\block_builder.h">
       <Filter>rocksdb\table</Filter>
     </ClInclude>
@@ -298,9 +307,6 @@
     <ClInclude Include="rocksdb\table\block_based_table_reader.h">
       <Filter>rocksdb\table</Filter>
     </ClInclude>
-    <ClCompile Include="rocksdb\table\format.cc">
-      <Filter>rocksdb\table</Filter>
-    </ClCompile>
     <ClCompile Include="rocksdb\db\write_batch.cc">
       <Filter>rocksdb\db</Filter>
     </ClCompile>
@@ -313,6 +319,9 @@
     <ClInclude Include="rocksdb\db\file_indexer.h">
       <Filter>rocksdb\db</Filter>
     </ClInclude>
+    <ClCompile Include="rocksdb\db\file_indexer.cc">
+      <Filter>rocksdb\db</Filter>
+    </ClCompile>
     <ClCompile Include="rocksdb\db\db_stats_logger.cc">
       <Filter>rocksdb\db</Filter>
     </ClCompile>
@@ -406,9 +415,6 @@
     <ClInclude Include="rocksdb\db\write_batch_internal.h">
       <Filter>rocksdb\db</Filter>
     </ClInclude>
-    <ClCompile Include="rocksdb\db\file_indexer.cc">
-      <Filter>rocksdb\db</Filter>
-    </ClCompile>
     <ClCompile Include="rocksdb\db\compaction.cc">
       <Filter>rocksdb\db</Filter>
     </ClCompile>
@@ -478,9 +484,6 @@
     <ClInclude Include="rocksdb\port\port.h">
       <Filter>rocksdb\port</Filter>
     </ClInclude>
-    <ClCompile Include="rocksdb\port\port_win.cc">
-      <Filter>rocksdb\port</Filter>
-    </ClCompile>
     <ClInclude Include="rocksdb\port\likely.h">
       <Filter>rocksdb\port</Filter>
     </ClInclude>
@@ -490,11 +493,14 @@
     <ClInclude Include="rocksdb\port\atomic_pointer.h">
       <Filter>rocksdb\port</Filter>
     </ClInclude>
-    <ClInclude Include="rocksdb\port\port_win.h">
-      <Filter>rocksdb\port</Filter>
-    </ClInclude>
     <ClInclude Include="rocksdb\port\stack_trace.h">
       <Filter>rocksdb\port</Filter>
+    </ClInclude>
+    <ClCompile Include="port\port_win.cc">
+      <Filter>port</Filter>
+    </ClCompile>
+    <ClInclude Include="port\port_win.h">
+      <Filter>port</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

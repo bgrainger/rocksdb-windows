@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Default|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;OS_WIN;ROCKSDB_ATOMIC_PRESENT;ROCKSDB_PLATFORM_WIN;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -41,7 +41,7 @@
       <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
     </Link>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;rocksdb;rocksdb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;OS_WIN;ROCKSDB_ATOMIC_PRESENT;ROCKSDB_PLATFORM_WIN;_WIN32_WINNT=0x0601;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
@@ -126,10 +126,11 @@
     <ClInclude Include="rocksdb\port\port.h"/>
     <ClInclude Include="rocksdb\port\likely.h"/>
     <ClInclude Include="rocksdb\port\atomic_pointer.h"/>
-    <ClInclude Include="rocksdb\port\port_win.h"/>
     <ClInclude Include="rocksdb\port\stack_trace.h"/>
+    <ClInclude Include="port\port_win.h"/>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="util\env_win.cc"/>
     <ClCompile Include="rocksdb\util\options.cc"/>
     <ClCompile Include="rocksdb\util\hash_cuckoo_rep.cc"/>
     <ClCompile Include="rocksdb\util\perf_context.cc"/>
@@ -143,7 +144,6 @@
     <ClCompile Include="rocksdb\util\murmurhash.cc"/>
     <ClCompile Include="rocksdb\util\crc32c.cc"/>
     <ClCompile Include="rocksdb\util\coding.cc"/>
-    <ClCompile Include="rocksdb\util\env_win.cc"/>
     <ClCompile Include="rocksdb\util\auto_roll_logger.cc"/>
     <ClCompile Include="rocksdb\util\comparator.cc"/>
     <ClCompile Include="rocksdb\util\slice.cc"/>
@@ -171,15 +171,16 @@
     <ClCompile Include="rocksdb\table\block.cc"/>
     <ClCompile Include="rocksdb\table\two_level_iterator.cc"/>
     <ClCompile Include="rocksdb\table\plain_table_factory.cc"/>
+    <ClCompile Include="rocksdb\table\format.cc"/>
     <ClCompile Include="rocksdb\table\iterator.cc"/>
     <ClCompile Include="rocksdb\table\table_properties.cc"/>
     <ClCompile Include="rocksdb\table\merger.cc"/>
     <ClCompile Include="rocksdb\table\block_based_table_reader.cc"/>
     <ClCompile Include="rocksdb\table\block_hash_index.cc"/>
     <ClCompile Include="rocksdb\table\filter_block.cc"/>
-    <ClCompile Include="rocksdb\table\format.cc"/>
     <ClCompile Include="rocksdb\db\write_batch.cc"/>
     <ClCompile Include="rocksdb\db\tailing_iter.cc"/>
+    <ClCompile Include="rocksdb\db\file_indexer.cc"/>
     <ClCompile Include="rocksdb\db\db_stats_logger.cc"/>
     <ClCompile Include="rocksdb\db\log_writer.cc"/>
     <ClCompile Include="rocksdb\db\forward_iterator.cc"/>
@@ -196,7 +197,6 @@
     <ClCompile Include="rocksdb\db\memtable_list.cc"/>
     <ClCompile Include="rocksdb\db\c.cc"/>
     <ClCompile Include="rocksdb\db\transaction_log_impl.cc"/>
-    <ClCompile Include="rocksdb\db\file_indexer.cc"/>
     <ClCompile Include="rocksdb\db\compaction.cc"/>
     <ClCompile Include="rocksdb\db\log_reader.cc"/>
     <ClCompile Include="rocksdb\db\db_filesnapshot.cc"/>
@@ -208,8 +208,8 @@
     <ClCompile Include="rocksdb\db\db_impl.cc"/>
     <ClCompile Include="rocksdb\db\db_impl_readonly.cc"/>
     <ClCompile Include="rocksdb\db\filename.cc"/>
-    <ClCompile Include="rocksdb\port\port_win.cc"/>
     <ClCompile Include="rocksdb\port\stack_trace.cc"/>
+    <ClCompile Include="port\port_win.cc"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
   <ImportGroup Label="ExtensionTargets"/>
